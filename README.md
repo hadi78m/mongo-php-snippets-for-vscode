@@ -1,10 +1,10 @@
 # mongo-php-snippets-for-vscode
-snippets pack for work mongodb in php for vs code
+snippets pack for work CRUD mongodb in php for vs code
 
 This extension contains code snippets for mongodb in php for [Vs Code][code] editor
 
 ### Note
-**All the snippets you need to work mongodb in php.**
+**All the snippets you need to  work CRUD operations mongodb in php.**
 
 ### Suport Language
 * Php (.php)
