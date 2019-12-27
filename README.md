@@ -7,7 +7,7 @@ This extension contains code snippets for mongodb in php for [Vs Code][code] edi
 **All the snippets you need to  work CRUD operations mongodb in php.**
 
 ### Suport Language
-* Php (.php)
+* PHP (.php)
 ## Snippets
 Below is a list of all available snippets and the triggers of each one. The **⇥** means the `TAB` key.
 
