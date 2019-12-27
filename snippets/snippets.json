@@ -1,0 +1,176 @@
+"new MongoDB": {
+	"scope": "php",
+	"prefix": "nmdb",
+	"body": [
+		"$$db = (new MongoDB\\client)->dbname;",
+		"$$collection = $db->cname;"
+	],
+	"description": "Create new MongoDb"
+},
+"new MongoDB collection": {
+	"scope": "php",
+	"prefix": "nmdbc",
+	"body": [
+		"$$db = (new MongoDB\\client)->dbname->cname;"
+	],
+	"description": "Create new MongoDb"
+},
+"insertOne": {
+	"scope": "php",
+	"prefix": "i.o",
+	"body": [
+		"$$db->insertOne([",
+			"'name' => 'iran',",
+			"'code' => '+98'",
+		 "]);"
+	],
+	"description": "insertOne in mongo php"
+},
+"insertMany": {
+	"scope": "php",
+	"prefix": "i.m",
+	"body": [
+		"$$db->insertOne([",
+			"'name' => 'iran',",
+			"'code' => '+98'",
+		 "],[",
+		 "'name'=>'usa',",
+		 "'code' => '+1'",
+		 "]);"
+	],
+	"description": "insertMany in mongo php"
+},
+"updateOne": {
+	"scope": "php",
+	"prefix": "u.o",
+	"body": [
+		"$$db->updateOne([",
+		"'name' => 'iran',",
+"], ['$$set' => ['code' => '0098']]);"
+	],
+	"description": "updateOne in mongo php"
+},
+"updateMany": {
+	"scope": "php",
+	"prefix": "u.m",
+	"body": [
+		"$$db->updateMany([",
+		"'name' => 'iran',",
+"], ['$$set' => ['code' => '0098']]);"
+	],
+	"description": "updateMany in mongo php"
+},
+"ReplaceOne": {
+	"scope": "php",
+	"prefix": "r.o",
+	"body": [
+		"$$db->replaceOne([",
+		"'name' => 'iran',",
+"], ['name' => 'Iran','code' => '0098']);"
+	],
+	"description": "ReplaceOne in mongo php"
+},	
+"deleteOne": {
+	"scope": "php",
+	"prefix": "d.o",
+	"body": [
+		"$$db->deleteOne([",
+			"'name' => 'iran'",
+		"]);"
+	],
+	"description": "deleteOne in mongo php"
+},
+"deleteMany": {
+	"scope": "php",
+	"prefix": "d.m",
+	"body": [
+		"$$db->deleteMany([",
+			"'state' => 'iran'",
+		"]);"
+	],
+	"description": "deleteMany in mongo php"
+},
+"findOne mongo php": {
+	"scope": "php",
+	"prefix": "f.o",
+	"body": [
+		"$$data=$$db->findOne([",
+			"'state' => 'iran'",
+		"]);",
+		"var_dump('$data');"
+	],
+	"description": "findOne in mongo php"
+},
+"findMany mongo php": {
+	"scope": "php",
+	"prefix": "f.m",
+	"body": [
+		"$$data=$$db->find([",
+			"'state' => 'iran'",
+		"]);",
+		"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+		"}",
+	],
+	"description": "findMany in mongo php"
+},
+"findMany limited mongo php": {
+	"scope": "php",
+	"prefix": "f.ml",
+	"body": [
+		"$$data = $$db->find([], ['limit' => 2]);",
+		"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+		"}"
+	],
+	"description": "findMany by limit in mongo php"
+},	
+"findMany limited  and sort ASC mongo php": {
+	"scope": "php",
+	"prefix": "f.lsa",
+	"body": [
+		"$$data = $$db->find([], ['limit' => 5,'sort'=>['CityId'=>1]]);",
+		"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+		"}"
+	],
+	"description": "findMany by limit and sort ASC in mongo php"
+},	
+"findMany limited  and sort Desc mongo php": {
+	"scope": "php",
+	"prefix": "f.lsd",
+	"body": [
+		"$$data = $$db->find([], ['limit' => 5,'sort'=>['CityId'=>-1]]);",
+		"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+		"}"
+	],
+	"description": "findMany by limit and sort Desc in mongo php"
+},
+"findMany Regular Expression mongo php": {
+	"scope": "php",
+	"prefix": "f.r",
+	"body": [
+		"$$data = $$db->find(['name'=> new MongoDB\\BSON\\Regex('^garden', 'i')]);",
+		"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+		"}"
+	],
+	"description": "findMany and reqular expretion in mongo php"
+},
+"findMany Aggregation mongo php": {
+	"scope": "php",
+	"prefix": "f.ag",
+	"body": [
+		"$$data = $$db->aggregate([",
+		"['$$group' => ['_id' => '$$state', 'count' => ['$$sum' => 1]]],",
+		"['$$sort' => ['count' => -1]],",
+		"['$$limit' => 5],",
+		"]);",
+		"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+		"}"
+	],
+	"description": "aggregate in mongo php"
+},
+}
