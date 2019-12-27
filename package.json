@@ -1,9 +1,9 @@
 {
-    "name": "Mongo-php-Snippets",
+    "name": "mongo-php-snippets",
     "displayName": "Mongo php Snippets",
     "description": "snippets pack for work mongodb in php for vs code",
-    "version": "1.0.0",
-    "publisher": "hadi gholipor",
+    "version": "1.0.1",
+    "publisher": "hadi78m",
     "engines": {
         "vscode": "^0.10.x"
     },
