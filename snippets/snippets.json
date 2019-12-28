@@ -3,8 +3,8 @@
 	"scope": "php",
 	"prefix": "nmdb",
 	"body": [
-		"$$db = (new MongoDB\\client)->dbname;",
-		"$$collection = $db->cname;"
+		"$$db = (new MongoDB\\client)->location; // db name",
+		"$$collection = $$db->city; // collection name"
 	],
 	"description": "Create new MongoDb"
 },
@@ -12,7 +12,7 @@
 	"scope": "php",
 	"prefix": "nmdbc",
 	"body": [
-		"$$db = (new MongoDB\\client)->dbname->cname;"
+		"$$db = (new MongoDB\\client)->location->city;"
 	],
 	"description": "Create new MongoDb"
 },
@@ -98,7 +98,7 @@
 		"$$data=$$db->findOne([",
 			"'state' => 'iran'",
 		"]);",
-		"var_dump('$data');"
+		"var_dump($$data);"
 	],
 	"description": "findOne in mongo php"
 },
@@ -173,5 +173,21 @@
 		"}"
 	],
 	"description": "aggregate in mongo php"
+},
+"Inserting a Decimal128 mongo php": {
+	"scope": "php",
+	"prefix": "i.d",
+	"body": [
+		"$$db->insertOne([",
+			"'_id' => 1,",
+			"'item' => '26-inch monitor',",
+			"'price' => new MongoDB\\BSON\\Decimal128('428.79'),",
+		"]);",
+		
+		"$$item = $$db->findOne(['_id' => 1]);",
+		
+		"var_dump($$item);"
+	],
+	"description": "Inserting a Decimal128 in mongo php"
 }
 }
