@@ -49,5 +49,6 @@ Below is a list of all available snippets and the triggers of each one. The **â‡
 
 ### For more information
 * [mongo-php-snippets-for-vscode](https://github.com/hadi78m/mongo-php-snippets-for-vscode)
+* [vscode-marketplace](https://marketplace.visualstudio.com/items?itemName=hadi78m.Mongo-php-Snippets)
 
 **Enjoy!**
