@@ -4,7 +4,7 @@ snippets pack for work CRUD mongodb in php for vs code
 ### Note
 **This extension has All the snippets you need to work CRUD operations mongodb in php for [Vs Code][code] editor.**
 
-![](F:\local\laragon\www\vscode-extention\Mongo-php-Snippets\images\mongo-php.gif)
+![](images\mongo-php.gif)
 
 ### Suport Language
 * PHP (.php)
