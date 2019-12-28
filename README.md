@@ -4,6 +4,8 @@ snippets pack for work CRUD mongodb in php for vs code
 ### Note
 **This extension has All the snippets you need to work CRUD operations mongodb in php for [Vs Code][code] editor.**
 
+![](F:\local\laragon\www\vscode-extention\Mongo-php-Snippets\images\mongo-php.gif)
+
 ### Suport Language
 * PHP (.php)
 ## Snippets
@@ -38,9 +40,10 @@ Below is a list of all available snippets and the triggers of each one. The **�
 ### Other
 | Trigger | Content |
 | ------: | ------- |
-| `f.ag → ` | aggregate mongo in php |  
-| `nmdb →`  | add new MongoDB in php |  
-| `nmdbc →` | add new MongoDB collection in php |  
+| `f.ag → ` | aggregate mongo in php |
+| `nmdb →`  | add new MongoDB and collection in 2 line in php |
+| `nmdbc →` | add new MongoDB and collection in 1 line in php |
+| `i.d →` | Inserting a Decimal128 in mongo php |
 
 [code]: https://code.visualstudio.com/
 
