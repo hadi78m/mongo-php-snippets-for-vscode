@@ -1,3 +1,5 @@
+<!-- in the name of god -->
+
 # mongo-php-snippets-for-vscode
 snippets pack for work CRUD mongodb in php for vs code
 
